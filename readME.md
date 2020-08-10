@@ -29,7 +29,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.221-b11, mixed mode)
 - https://stackoverflow.com/questions/1688099/converting-json-data-to-java-object
 - [JPQL](https://thorben-janssen.com/spring-data-jpa-query-annotation/)
 - [Jackson API](https://www.concretepage.com/jackson-api/jackson-jsonformat-example)
-- [GSON] (https://www.tutorialspoint.com/gson/gson_object_serialization.htm)
+- [GSON] (https://www.tutorialspoint.com/gson/gson_object_serialization.html)
 - [H2 database](http://www.h2database.com/html/functions.html)
 - [SpringBoot with H2](https://www.baeldung.com/spring-boot-h2-database)
 - [Spring Data JPA](https://www.baeldung.com/spring-data-jpa-query)
