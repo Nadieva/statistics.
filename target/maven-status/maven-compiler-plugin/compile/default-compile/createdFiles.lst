@@ -1,0 +1,14 @@
+com\adex\statistics\entity\RequestList.class
+com\adex\statistics\CustomerRepository.class
+com\adex\statistics\entity\Customer.class
+com\adex\statistics\RequestRepository.class
+com\adex\statistics\IpBlacklistRepository.class
+com\adex\statistics\HourlyStatsRespository.class
+com\adex\statistics\entity\HourlyStats.class
+com\adex\statistics\StatisticsApplication.class
+com\adex\statistics\UserAgentBlacklistRepository.class
+com\adex\statistics\entity\UserAgentBlacklist.class
+com\adex\statistics\StatsService.class
+com\adex\statistics\entity\IpBlacklist.class
+com\adex\statistics\entity\Request.class
+com\adex\statistics\StatsController.class
