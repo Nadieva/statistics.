@@ -1,4 +1,4 @@
-package com.adex.statistics;
+package com.nadiamm.statistics;
 
 
 import org.springframework.boot.SpringApplication;
