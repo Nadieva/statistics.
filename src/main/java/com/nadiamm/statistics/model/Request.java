@@ -7,14 +7,14 @@ import com.sun.istack.NotNull;
 @Entity
 @Table(name="REQUESTS")
 public class Request{
-	static String USERID_PATTERN = 
+	private final static String USERID_PATTERN =
 	        "^([a-zA-Z]{8})\\-" +
 	        "([a-zA-Z]{4})\\-" +
 	        "([a-zA-Z]{4})\\-" +
 	        "([0-9]{4})\\-" +
 	        "([0-9]{12})$";
 	
-	static String IPADDRESS_PATTERN = 
+	private final static String IPADDRESS_PATTERN =
 	        "^([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\." +
 	        "([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\." +
 	        "([01]?\\d\\d?|2[0-4]\\d|25[0-5])\\." +
@@ -35,7 +35,7 @@ public class Request{
 	@SerializedName("tagID")
 	@Expose
 	@Column(name="tagId")
-	private int tagID;
+	private long tagID;
 	
 	@SerializedName("userID")
 	@Expose
@@ -55,13 +55,21 @@ public class Request{
 	@Expose
 	@Column(name="valid")
 	private boolean valid;
-	
+
+	public Request(long customerID, long tagID, String userID, String remoteIP, int timestamp) {
+		this.customerID = customerID;
+		this.tagID = tagID;
+		this.userID = userID;
+		this.remoteIP = remoteIP;
+		this.timestamp = timestamp;
+	}
+
 	public long getCustomerID() {
 		return customerID;
 	}
 
 
-	public int getTagID() {
+	public long getTagID() {
 		return tagID;
 	}
 
@@ -77,6 +85,9 @@ public class Request{
 		return timestamp;
 	}
 
+	public boolean getValid() {
+		return valid;
+	}
 
 	public boolean isValid() {
 		return hasValidUserID(getUserID()) && hasValidIntegers() && hasValidRemoteIP(getRemoteIP());
@@ -91,11 +102,11 @@ public class Request{
 	}
 	
 	public boolean hasValidUserID(String s) {
-		return s!= null ? s.matches(USERID_PATTERN) : false;
+		return s != null && s.matches(USERID_PATTERN);
 	}
 
 	public boolean hasValidRemoteIP(String s) {
-		return s!= null ? s.matches(IPADDRESS_PATTERN) :false;
+		return s != null && s.matches(IPADDRESS_PATTERN);
 	}
 
 	@Override

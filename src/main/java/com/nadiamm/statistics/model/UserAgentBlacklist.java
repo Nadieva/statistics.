@@ -10,4 +10,12 @@ public class UserAgentBlacklist {
 	@NotNull
 	@Column(name="userAgent")
 	private String userAgent;
+
+	public UserAgentBlacklist(String userAgent) {
+		this.userAgent = userAgent;
+	}
+
+	public String getUserAgent() {
+		return userAgent;
+	}
 }

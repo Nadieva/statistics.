@@ -13,12 +13,12 @@ _Note: Please pay attention to the structure if you change the file `requests.js
 `{ "requests": [ {object}, {object},...]}`_
 
 Here are the instructions:
-- load or clone the project (git clone https://github.com/nadia-mm/statistics.git )
-- cd into statistics
-- mvn clean package
-- java -jar target\statistics-0.0.1-SNAPSHOT.jar
-- type the endpoints in a web browser to see the results
- 
+- load or clone the project
+````shell
+git clone https://github.com/nadia-mm/statistics.git
+````
+- run StatisticsApplication.java in your IDE
+
  ## Task
 The HTTP service does the following ones:
 - receives requests from a JSON file
@@ -30,6 +30,8 @@ The service also provides an endpoint to get the statistics for:
   -  a specific customer ***AND***
   - a specific day
 The response contains the total number of requests for that day.
+
+![demo](src/main/resources/demo.jpg)
 
 ### Requests considered as invalid are:
 * malformed JSON (i.e. NOT `{"customerID":1,"tagID":2,"userID":"aaaaaaaa-bbbb-cccc-1111-222222222222","remoteIP":"123.234.56.78","timestamp":1500000000}` )

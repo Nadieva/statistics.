@@ -10,4 +10,16 @@ public class IpBlacklist {
 	@NotNull
 	@Column(name="IP")
 	private long remoteIP;
+
+	public IpBlacklist(long remoteIP) {
+		this.remoteIP = remoteIP;
+	}
+
+	public long getRemoteIP() {
+		return remoteIP;
+	}
+
+	public void setRemoteIP(long remoteIP) {
+		this.remoteIP = remoteIP;
+	}
 }

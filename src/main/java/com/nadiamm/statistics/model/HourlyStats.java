@@ -14,11 +14,10 @@ public class HourlyStats {
 	@Id
 	@NotNull
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
-	private int id;
+	private long id;
 	
 	@NotNull
 	@Column(name="customer_id")
-	@JsonProperty("customerid")
 	private long customerId;
 	
 	@NotNull
@@ -41,9 +40,44 @@ public class HourlyStats {
 		this.validRequestCount=validRequestCount;
 		this.invalidRequestCount=invalidRequestCount;
 	}
-	
-	public HourlyStats() {
-		
+
+	public long getId() {
+		return id;
 	}
 
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public long getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(long customerId) {
+		this.customerId = customerId;
+	}
+
+	public Timestamp getTime() {
+		return time;
+	}
+
+	public void setTime(Timestamp time) {
+		this.time = time;
+	}
+
+	public int getValidRequestCount() {
+		return validRequestCount;
+	}
+
+	public void setValidRequestCount(int validRequestCount) {
+		this.validRequestCount = validRequestCount;
+	}
+
+	public int getInvalidRequestCount() {
+		return invalidRequestCount;
+	}
+
+	public void setInvalidRequestCount(int invalidRequestCount) {
+		this.invalidRequestCount = invalidRequestCount;
+	}
 }
